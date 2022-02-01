@@ -17,14 +17,30 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "WebAPI": {
-      "commandName": "Project",
-      "launchBrowser": true,
-      "launchUrl": "weatherforecast",
-      "applicationUrl": "http://localhost:53535",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
+    //"WebAPI": {
+    //  "commandName": "Project",
+    //  "launchBrowser": true,
+    //  "launchUrl": "api/employee",
+    //  "applicationUrl": "http://localhost:5000",
+    //  "environmentVariables": {
+    //    "ASPNETCORE_ENVIRONMENT": "Development"
+     // }
+      //"WebAPI": {
+      //  "commandName": "Project",
+      //  "launchBrowser": true,
+      //  "launchUrl": "api/department",
+      //  "applicationUrl": "http://localhost:5000",
+      //  "environmentVariables": {
+      //    "ASPNETCORE_ENVIRONMENT": "Development"
+      //  }
+      "WebAPI": {
+        "commandName": "Project",
+        "launchBrowser": true,
+        "launchUrl": "weatherforecast",
+        "applicationUrl": "http://localhost:53535",
+        "environmentVariables": {
+          "ASPNETCORE_ENVIRONMENT": "Development"
+        }
     }
   }
 }

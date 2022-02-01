@@ -47,37 +47,35 @@ export class Department extends Component{
                     <thead>
                         <tr>
                             <th>DepartmentId</th>
-                        <th>DepartmentName</th>
-                        <th>Options</th>
+                            <th>DepartmentName</th>
+                            <th>Options</th>
                         </tr>
                     </thead>
                     <tbody>
                         {deps.map(dep=>
-                            <tr key={dep.DepartmentId}>
-                                <td>{dep.DepartmentId}</td>
-                                <td>{dep.DepartmentName}</td>
-                                <td>
-<ButtonToolbar>
-    <Button className="mr-2" variant="info"
-    onClick={()=>this.setState({editModalShow:true,
-        depid:dep.DepartmentId,depname:dep.DepartmentName})}>
-            Edit
-        </Button>
+                        <tr key={dep.DepartmentId}>
+                            <td>{dep.DepartmentId}</td>
+                            <td>{dep.DepartmentName}</td>
+                            <td>
+                                <ButtonToolbar>
+                                    <Button className="mr-2" variant="info"
+                                    onClick={()=>this.setState({editModalShow:true,
+                                        depid:dep.DepartmentId,depname:dep.DepartmentName})}>
+                                            Edit
+                                        </Button>
 
-        <Button className="mr-2" variant="danger"
-    onClick={()=>this.deleteDep(dep.DepartmentId)}>
-            Delete
-        </Button>
+                                        <Button className="mr-2" variant="danger"
+                                    onClick={()=>this.deleteDep(dep.DepartmentId)}>
+                                            Delete
+                                        </Button>
 
-        <EditDepModal show={this.state.editModalShow}
-        onHide={editModalClose}
-        depid={depid}
-        depname={depname}/>
-</ButtonToolbar>
-
-                                </td>
-
-                            </tr>)}
+                                        <EditDepModal show={this.state.editModalShow}
+                                        onHide={editModalClose}
+                                        depid={depid}
+                                        depname={depname}/>
+                                </ButtonToolbar>
+                            </td>
+                        </tr>)}
                     </tbody>
 
                 </Table>

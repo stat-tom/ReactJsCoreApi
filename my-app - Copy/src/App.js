@@ -13,7 +13,7 @@ function App() {
     <BrowserRouter>
     <div className="container">
      <h3 className="m-3 d-flex justify-content-center">
-       React JS Tutorial
+       React and .NET Core App
      </h3>
 
      <Navigation/>

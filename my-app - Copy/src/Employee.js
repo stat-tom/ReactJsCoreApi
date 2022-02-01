@@ -47,10 +47,10 @@ export class Employee extends Component{
                     <thead>
                         <tr>
                             <th>EmployeeId</th>
-                        <th>EmployeeName</th>
-                        <th>Department</th>
-                        <th>DOJ</th>
-                        <th>Options</th>
+                            <th>EmployeeName</th>
+                            <th>Department</th>
+                            <th>DOJ</th>
+                            <th>Options</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -61,31 +61,29 @@ export class Employee extends Component{
                                 <td>{emp.Department}</td>
                                 <td>{emp.DateOfJoining}</td>
                                 <td>
-<ButtonToolbar>
-    <Button className="mr-2" variant="info"
-    onClick={()=>this.setState({editModalShow:true,
-        empid:emp.EmployeeId,empname:emp.EmployeeName,depmt:emp.Department,
-        photofilename:emp.PhotoFileName,doj:emp.DateOfJoining})}>
-            Edit
-        </Button>
+                                    <ButtonToolbar>
+                                        <Button className="mr-2" variant="info"
+                                        onClick={()=>this.setState({editModalShow:true,
+                                            empid:emp.EmployeeId,empname:emp.EmployeeName,depmt:emp.Department,
+                                            photofilename:emp.PhotoFileName,doj:emp.DateOfJoining})}>
+                                                Edit
+                                            </Button>
 
-        <Button className="mr-2" variant="danger"
-    onClick={()=>this.deleteEmp(emp.EmployeeId)}>
-            Delete
-        </Button>
+                                            <Button className="mr-2" variant="danger"
+                                        onClick={()=>this.deleteEmp(emp.EmployeeId)}>
+                                                Delete
+                                            </Button>
 
-        <EditEmpModal show={this.state.editModalShow}
-        onHide={editModalClose}
-        empid={empid}
-        empname={empname}
-        depmt={depmt}
-        photofilename={photofilename}
-        doj={doj}
-        />
-</ButtonToolbar>
-
+                                            <EditEmpModal show={this.state.editModalShow}
+                                            onHide={editModalClose}
+                                            empid={empid}
+                                            empname={empname}
+                                            depmt={depmt}
+                                            photofilename={photofilename}
+                                            doj={doj}
+                                            />
+                                    </ButtonToolbar>
                                 </td>
-
                             </tr>)}
                     </tbody>
 
